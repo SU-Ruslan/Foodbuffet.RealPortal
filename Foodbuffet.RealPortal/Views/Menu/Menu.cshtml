@@ -1,0 +1,571 @@
+﻿@model List<MenuViewModel>
+
+@{
+    Layout = "_Layout";
+
+    ViewData["Title"] = "Products - Foodbuffet X - Webflow Ecommerce website template";
+    ViewData["Description"] = "FoodBuffet X is a premium Restaurant Webflow Template crafted for restaurants aiming to create a stylish, responsive website to attract food lovers and increase bookings.";
+    ViewData["OGTitle"] = "Products - Foodbuffet X - Webflow Ecommerce website template";
+    ViewData["OGDescription"] = "FoodBuffet X is a premium Restaurant Webflow Template crafted for restaurants aiming to create a stylish, responsive website to attract food lovers and increase bookings.";
+    ViewData["OGImage"] = "../images/foodbuffet-x-restaurant-webflow-template.png";
+    ViewData["TwitterTitle"] = "Products - Foodbuffet X - Webflow Ecommerce website template";
+    ViewData["TwitterDescription"] = "FoodBuffet X is a premium Restaurant Webflow Template crafted for restaurants aiming to create a stylish, responsive website to attract food lovers and increase bookings.";
+    ViewData["TwitterImage"] = "../images/foodbuffet-x-restaurant-webflow-template.png";
+    ViewData["CSSPath"] = "../css/webflow-style.css";
+    ViewData["FaviconPath"] = "../images/favicon.png";
+    ViewData["AppIconPath"] = "../images/app-icon.png";
+}
+
+
+@Html.Partial("_MenuLight")
+
+
+<section class="section hero v7">
+    <div class="container-default w-container">
+        <div class="z-index-1">
+            <div data-w-id="a80b4bd4-cb4c-bc7b-5366-cebad542158e"
+                 style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                 class="text-center">
+                <h1 class="display-1">Our menu</h1>
+                <div class="mg-top-small">
+                    <div class="inner-container _530px center">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit aliquam imperdiet nisl duis arcu morbi <span class="text-no-wrap">libero namac.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div data-w-id="31cdeff9-75b9-3ad7-ed95-cde4fa10467f"
+                 style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                 class="mg-top-medium">
+                <div class="w-dyn-list">
+                    <div role="list" class="grid-4-columns menu-grid-v1 w-dyn-items">
+                        @foreach (MenuViewModel product1 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14"
+                                 role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/chimmi-makis" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product1.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Chimmi Makis"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/chimmi-makis-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/chimmi-makis-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/chimmi-makis-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product1.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product1.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product1.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product2 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/migiri-sushi" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product2.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Migiri Sushi"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/migiri-sushi-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/migiri-sushi-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/migiri-sushi-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product2.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product2.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product2.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product3 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/togarashi-makis" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product3.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Togarashi Makis" class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product3.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product3.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product3.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product4 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/salmon-roll" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product4.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Salmon Roll"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/salmon-roll-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/salmon-roll-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/salmon-roll-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product4.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product4.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product4.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product5 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/tuna-poke-bowl" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product5.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Tuna Poke Bowl"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/tuna-poke-bowl-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/tuna-poke-bowl-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/tuna-poke-bowl-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product5.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product5.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product5.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product6 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/sardine-stew" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product6.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Sardine Stew"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/sardine-stew-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/sardine-stew-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/sardine-stew-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product6.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product6.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product6.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product7 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/vegetarian-ramen" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product7.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Vegetarian Ramen"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/vegetarian-ramen-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/vegetarian-ramen-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/vegetarian-ramen-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product7.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product7.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product7.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product8 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/vegetarian-soup" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product8.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Vegetarian Soup"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/vegetarian-soup-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/vegetarian-soup-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/vegetarian-soup-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product8.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product8.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product8.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="mg-top-100px">
+                <div class="w-dyn-list">
+                    <div role="list" class="grid-4-columns menu-grid-v1 w-dyn-items">
+                        @foreach (MenuViewModel product1 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/chimmi-makis" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product1.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Chimmi Makis"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/chimmi-makis-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/chimmi-makis-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/chimmi-makis-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product1.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product1.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product1.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product2 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/migiri-sushi" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product2.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Migiri Sushi"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/migiri-sushi-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/migiri-sushi-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/migiri-sushi-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product2.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product2.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product2.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product3 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/togarashi-makis" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product3.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Togarashi Makis" class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product3.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product3.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product3.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product4 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/salmon-roll" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product4.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Salmon Roll"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/salmon-roll-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/salmon-roll-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/salmon-roll-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product4.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product4.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product4.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product5 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/tuna-poke-bowl" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product5.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Tuna Poke Bowl"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/tuna-poke-bowl-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/tuna-poke-bowl-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/tuna-poke-bowl-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product5.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product5.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product5.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product6 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/sardine-stew" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product6.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Sardine Stew"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/sardine-stew-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/sardine-stew-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/sardine-stew-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product6.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product6.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product6.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product7 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/vegetarian-ramen" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product7.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Vegetarian Ramen"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/vegetarian-ramen-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/vegetarian-ramen-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/vegetarian-ramen-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product7.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product7.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product7.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                        @foreach (MenuViewModel product8 in Model)
+                        {
+
+                            <div id="w-node-fdff256b-a678-d3f7-4065-a134e8cd3e5c-68c09d14" role="listitem"
+                                 class="w-dyn-item">
+                                <a data-w-id="fdff256b-a678-d3f7-4065-a134e8cd3e5d"
+                                   style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:100"
+                                   href="/product/vegetarian-soup" class="product-card-v1-wrapper w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="@Url.Content(product8.ImagePath)"
+                                             loading="eager"
+                                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                                             alt="Vegetarian Soup"
+                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 48vw, (max-width: 991px) 49vw, (max-width: 1919px) 24vw, 25vw"
+                                             srcset="../images/vegetarian-soup-main-image-foodbuffet-x-webflow-template-p-500.jpg 500w, ../images/vegetarian-soup-main-image-foodbuffet-x-webflow-template-p-800.jpg 800w, ../images/vegetarian-soup-main-image-foodbuffet-x-webflow-template.jpg 1176w"
+                                             class="card-image _w-h-100 product-card-image" />
+                                        <div class="badge-wrapper-top-left badge-right-16px">
+                                            <div class="badge-primary small text-bold">@product8.Price</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h3 class="card-title display-4">@product8.ProductName</h3>
+                                        <p class="mg-top-extra-small">
+                                            @product8.Description
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-w-id="a80b4bd4-cb4c-bc7b-5366-cebad54215ac" style="opacity:100" class="shape-wrapper shape-top---left v4">
+        <img src="../images/shape-decoration-bg-06-foodbuffet-x-webflow-template.svg" loading="eager"
+             alt="Shape Decoration BG 06 - Foodbuffet X Webflow Template" class="shape-width" />
+    </div>
+</section>
+<div class="bg-neutral-200">
+    <section class="section pd-200px position-relative">
+        <div class="container-default z-index-1 w-container">
+            <div>
+                <div data-w-id="391ebf49-2cdf-4156-2960-1c0a8d6d9add" class="inner-container _600px center">
+                    <div class="inner-container _550px---mbl center">
+                        <div class="text-center">
+                            <h2 class="display-2">Order <span class="text-no-wrap">via app</span></h2>
+                            <div class="mg-top-small">
+                                <p>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur <span class="text-no-wrap">occaecat cupidatat</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mg-top-medium">
+                    <div data-w-id="391ebf49-2cdf-4156-2960-1c0a8d6d9ae5" class="w-layout-grid grid-4-columns apps-grid">
+                        <div id="w-node-_2a0c2807-8b59-3cad-cb62-23e0372779fd-8d6d9adc" class="logo-card-image-wrapper">
+                            <img src="../images/business-logo-food-buffet-webflow-template.svg" loading="eager"
+                                 id="w-node-_391ebf49-2cdf-4156-2960-1c0a8d6d9ae6-8d6d9adc" alt="" class="logo-card-image" />
+                        </div>
+                        <div id="w-node-_434a5fc9-9c6e-362f-cb3e-4eb326cf9d01-8d6d9adc" class="logo-card-image-wrapper">
+                            <img src="../images/compnay-logo-food-buffet-webflow-template.svg" loading="eager"
+                                 id="w-node-_391ebf49-2cdf-4156-2960-1c0a8d6d9ae7-8d6d9adc" alt="" class="logo-card-image" />
+                        </div>
+                        <div id="w-node-e66dffce-46cf-18a8-202e-d48635641fb0-8d6d9adc" class="logo-card-image-wrapper">
+                            <img src="../images/institute-logo-food-buffet-webflow-template.svg" loading="eager"
+                                 id="w-node-_391ebf49-2cdf-4156-2960-1c0a8d6d9ae8-8d6d9adc" alt="" class="logo-card-image" />
+                        </div>
+                        <div id="w-node-_55161ae7-0d70-f22d-ce92-0fb049fea9ef-8d6d9adc" class="logo-card-image-wrapper">
+                            <img src="../images/startup-logo-food-buffet-webflow-template.svg" loading="eager"
+                                 id="w-node-_391ebf49-2cdf-4156-2960-1c0a8d6d9ae9-8d6d9adc" alt="" class="logo-card-image" />
+                        </div>
+                    </div>
+                </div>
+                <div class="mg-top-extra-large">
+                    <div data-w-id="391ebf49-2cdf-4156-2960-1c0a8d6d9aef" class="buttons-row">
+                        <a id="w-node-_4786dc11-a7ac-6ec0-fa0f-a1b01313c283-1313c283" href="/shop-pages/delivery"
+                           class="btn-primary w-inline-block">
+                            <div>Order Now</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-w-id="10464926-05b4-74a9-e1e0-c7dd0e2fe18b" style="opacity:100"
+             class="shape-wrapper shape-bottom---right">
+            <img src="../images/shape-decoration-bg-01-foodbuffet-x-webflow-template.svg" loading="eager"
+                 alt="Shape Decoration BG 01 - Foodbuffet X Webflow Template" class="shape-width _438px" />
+        </div>
+    </section>
+</div>
